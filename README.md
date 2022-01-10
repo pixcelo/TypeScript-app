@@ -1,2 +1,1 @@
-# au_kabcom
-# ts-node-solana
+# node-solana
