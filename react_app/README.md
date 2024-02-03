@@ -51,6 +51,9 @@ npx create-react-app --help
 ```
 npm start
 ```
+`docker-compose.yml`に指定したポート`localhost:3000`に接続できる
+
+
 
 ## Reference
 - [dockerhub node](https://hub.docker.com/_/node)
