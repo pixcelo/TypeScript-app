@@ -5,7 +5,7 @@ docker hubでnodeを検索、使用するnode.jsのバージョンを`Dockerfile
 ファイル構成
 ```
 プロジェクトルート/
-├── front/ (フォルダ)
+├── front/ (空のフォルダ)
 ├── docker-compose.yml
 └── Dockerfile
 ```
@@ -13,7 +13,7 @@ docker hubでnodeを検索、使用するnode.jsのバージョンを`Dockerfile
 コンテナ起動
 ```
 cd react_app
-docker-compose up
+docker-compose up --build
 ```
 
 コンテナのシェルに入る
@@ -21,13 +21,16 @@ docker-compose up
 docker-compose exec front sh
 ```
 
-Reactのテンプレート作成
+Reactのテンプレート作成<br>
+`npx create-react-app [プロジェクト名] --template typescirpt --use--npm`で下記例の場合、空の`front`フォルダにReactのテンプレートファイルが作成される
 ```
-npx create-react-app . --template typescript --use--npm
+npx create-react-app front --template typescirpt --use--npm
 ```
 
 Reactの作成に成功したかを確認する
 ```
+cd front
+
 /front # npm list react
 front@0.1.0 /front
 +-- @testing-library/react@13.4.0
@@ -39,5 +42,12 @@ front@0.1.0 /front
 `-- react@18.2.0
 ```
 
+コマンドのオプション確認
+```
+npx create-react-app --help
+```
+
 ## Reference
 - [dockerhub node](https://hub.docker.com/_/node)
+- [React Reference](https://react.dev/reference/react)
+- [create-react-app](https://github.com/facebook/create-react-app)
