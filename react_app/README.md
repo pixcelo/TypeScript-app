@@ -47,6 +47,11 @@ front@0.1.0 /front
 npx create-react-app --help
 ```
 
+サーバー起動
+```
+npm start
+```
+
 ## Reference
 - [dockerhub node](https://hub.docker.com/_/node)
 - [React Reference](https://react.dev/reference/react)
