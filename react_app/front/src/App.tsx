@@ -18,7 +18,7 @@ function App() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(e.target.value);
     setInputValue(e.target.value);
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,7 +32,18 @@ function App() {
 
      setTodos([newTodo, ...todos]);
      setInputValue("");
-  }
+  };
+
+  const handleEdit = (id: number, inputValue: string) => {
+    const newTodos = todos.map(todo => {
+      if (todo.id === id) {
+        todo.inputValue = inputValue;
+      }
+      return todo;
+    });
+
+    setTodos(newTodos);
+  };
 
   return (
     <div className="App">  
@@ -45,6 +56,17 @@ function App() {
         />
         <input type="submit" value="add" className='submitButton' />
       </form>
+      <ul>
+        {todos.map(todo => (
+          // <li key={todo.id}>{todo.inputValue}</li>
+          <input 
+            type="text"
+            onChange={(e) => handleEdit(todo.id, e.target.value)}
+            className="inputText" 
+            value={todo.inputValue}
+          />
+        ))}
+      </ul>
     </div>
   );
 }
