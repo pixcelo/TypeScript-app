@@ -16,16 +16,31 @@ function App() {
 
   // 入力を受け取る
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
+    setInputValue(e.target.value);
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // 新しいTodoを作成
+     const newTodo: Todo = {
+      inputValue: inputValue,
+      id: todos.length,
+      checked: false,
+     }
+
+     setTodos([newTodo, ...todos]);
+     setInputValue("");
   }
 
   return (
     <div className="App">  
       <div>Todo List</div>
-      <form onSubmit={() => {}}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input 
           type="text"
-          onChange={(event) => handleChange(event)}
+          onChange={(e) => handleChange(e)}
           className="inputText" 
         />
         <input type="submit" value="add" className='submitButton' />

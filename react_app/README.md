@@ -59,3 +59,4 @@ npm start
 - [dockerhub node](https://hub.docker.com/_/node)
 - [React Reference](https://react.dev/reference/react)
 - [create-react-app](https://github.com/facebook/create-react-app)
+- [React Developer Tools (chrome拡張)](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?pli=1)
