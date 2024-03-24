@@ -29,3 +29,6 @@ $ npm install passport-facebook
 $ git pull
 $ npm install
 ```
+
+## Tools
+- [OAuth2.0 <debugger/>](https://oauthdebugger.com/)
