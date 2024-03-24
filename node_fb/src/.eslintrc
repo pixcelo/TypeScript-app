@@ -1,0 +1,12 @@
+{
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": ["error", 4],
+      "semi": ["error", "always"],
+      "quotes": ["error", "double"]
+    }
+  }
+  
